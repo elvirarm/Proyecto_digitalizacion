@@ -1,0 +1,179 @@
+{
+    "lentejas": {
+        "ingredientes": [
+            "chorizo",
+            " pimientos",
+            " lentejas",
+            " arroz"
+        ],
+        "instrucciones": [
+            "cortar verduras",
+            " cortar chorizo",
+            " cocinar verduras",
+            " tostar chorizo",
+            " rehogar todo junto",
+            " añadir agua",
+            " esperar que hierva",
+            " esperar 20 minutos si utilizas olla exprés"
+        ]
+    },
+    "tortilla": {
+        "ingredientes": [
+            "huevo",
+            " patatas"
+        ],
+        "instrucciones": [
+            "cortar patatas",
+            " freir patatas",
+            " batir huevos",
+            " añadir huevos a las patatas",
+            " freir todo junto"
+        ]
+    },
+    "croquetas": {
+        "ingredientes": [
+            "carne",
+            " bechamel"
+        ],
+        "instrucciones": [
+            "cocinar todo",
+            " montar las croquetas",
+            " freir"
+        ]
+    },
+    "espaguetis a la carbonara": {
+        "ingredientes": [
+            "espaguetis",
+            " nata",
+            " bacon",
+            " cebolla"
+        ],
+        "instrucciones": [
+            "cocer la pasta 20 minutos",
+            " cortar la cebolla y pocharla en la sartén",
+            " freir el bacon en la sartén",
+            " mezclar los espaguetis con la nata y el resto de los ingredientes y calentar  en la sartén todo junto"
+        ]
+    },
+    "pollo al curry": {
+        "ingredientes": [
+            "pollo",
+            "cebolla",
+            "ajo",
+            "leche de coco",
+            "curry en polvo",
+            "aceite de oliva",
+            "sal"
+        ],
+        "instrucciones": [
+            "cortar el pollo en trozos pequeños",
+            "pelar y picar la cebolla y el ajo",
+            "calentar aceite en una sartén y sofreír la cebolla y el ajo hasta que estén tiernos",
+            "añadir el pollo y cocinar hasta que esté dorado",
+            "agregar el curry en polvo y mezclar bien",
+            "verter la leche de coco y cocinar a fuego lento durante 20 minutos",
+            "servir caliente"
+        ]
+    },
+    "ensalada césar":{
+        "ingredientes": [
+            "lechuga romana",
+            "pollo asado",
+            "pan tostado",
+            "queso parmesano",
+            "salsa César"
+        ],
+        "instrucciones": [
+            "lavar y cortar la lechuga romana en trozos",
+            "cortar el pollo asado en tiras",
+            "tostar el pan y cortarlo en cubitos",
+            "rallar el queso parmesano",
+            "mezclar la lechuga, el pollo, los cubitos de pan y el queso en un bol",
+            "añadir la salsa César y mezclar bien",
+            "servir inmediatamente"
+        ]
+    },
+    "brownie de chocolate": {
+        "ingredientes": [
+            "chocolate negro",
+            "mantequilla",
+            "azúcar",
+            "huevos",
+            "harina",
+            "nueces"
+        ],
+        "instrucciones": [
+            "precalentar el horno a 180°C",
+            "derretir el chocolate y la mantequilla al baño maría",
+            "batir los huevos con el azúcar hasta que estén espumosos",
+            "mezclar el chocolate derretido con la mezcla de huevos",
+            "añadir la harina y mezclar hasta que esté integrada",
+            "agregar las nueces picadas",
+            "verter la mezcla en un molde engrasado",
+            "hornear durante 25-30 minutos",
+            "dejar enfriar antes de servir"
+        ]
+    },
+    "salmón al horno con verduras": {
+        "ingredientes": [
+            "salmón fresco",
+            "brócoli",
+            "zanahoria",
+            "calabacín",
+            "aceite de oliva",
+            "limón",
+            "sal",
+            "pimienta"
+        ],
+        "instrucciones": [
+            "precalentar el horno a 200°C",
+            "cortar el brócoli, la zanahoria y el calabacín en trozos",
+            "colocar el salmón y las verduras en una bandeja para horno",
+            "aliñar con aceite de oliva, jugo de limón, sal y pimienta",
+            "hornear durante 20-25 minutos o hasta que el salmón esté cocido",
+            "servir caliente"
+        ]
+    },
+    "crema de calabacín y espinacas": {
+        "ingredientes": [
+            "calabacín",
+            "espinacas frescas",
+            "cebolla",
+            "ajo",
+            "caldo de verduras",
+            "aceite de oliva",
+            "sal",
+            "pimienta"
+        ],
+        "instrucciones": [
+            "pelar y picar la cebolla y el ajo",
+            "calentar aceite de oliva en una olla y sofreír la cebolla y el ajo hasta que estén tiernos",
+            "cortar el calabacín en rodajas y añadirlo a la olla",
+            "agregar las espinacas y el caldo de verduras",
+            "cocinar a fuego medio durante 15-20 minutos",
+            "triturar la mezcla hasta obtener una crema suave",
+            "sazonar con sal y pimienta al gusto",
+            "servir caliente"
+        ]
+    },
+    "ensalada de garbanzos y vegetales": {
+        "ingredientes": [
+            "garbanzos cocidos",
+            "tomate",
+            "pepino",
+            "pimiento verde",
+            "cebolla morada",
+            "perejil fresco",
+            "limón",
+            "aceite de oliva",
+            "sal",
+            "comino"
+        ],
+        "instrucciones": [
+            "cortar el tomate, el pepino, el pimiento y la cebolla en cubitos",
+            "mezclar los garbanzos con los vegetales en un bol",
+            "aliñar con el jugo de limón, aceite de oliva, sal, comino y perejil fresco",
+            "servir frío"
+        ]
+    }
+}
