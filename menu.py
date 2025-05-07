@@ -1,11 +1,11 @@
 """
-Aplicación de gestión de recetas con interfaz gráfica y sincronización en la nube.
+Recipe management application with graphical interface and cloud synchronization.
 
-Este módulo permite al usuario:
-- Añadir, ver y eliminar recetas locales.
-- Generar un menú semanal aleatorio.
-- Sincronizar recetas con una API en la nube.
-- Usar una interfaz visual interactiva con Gradio.
+This module allows the user to:
+- Add, view, and delete local recipes.
+- Generate a random weekly menu.
+- Sync recipes to a cloud API.
+- Use an interactive visual interface with Gradio.
 """
 
 import os
@@ -15,13 +15,13 @@ import requests
 import gradio as gr
 from dotenv import load_dotenv
 
-# Cargar las variables del archivo .env
+# Load environment variables from .env file
 load_dotenv()
 
-# Archivos locales
+# Local file for storing recipes
 ARCHIVO_RECETAS = "recetas.json"
 
-# Configuración de la API
+# API configuration
 API_URL = os.getenv("API_URL")
 HEADERS_API = {
     "Content-Type": "application/json",
@@ -35,13 +35,13 @@ HEADERS_API = {
 def leer_json(ruta):
  
     """
-    Lee un archivo JSON y devuelve su contenido como diccionario.
+    Reads a JSON file and returns its contents as a dictionary.
 
     Args:
-        ruta (str): Ruta del archivo JSON.
+        ruta (str): Path to the JSON file.
 
     Returns:
-        dict: Contenido del archivo o diccionario vacío si hay error.
+        dict: File contents or an empty dictionary in case of error.
     """
 
     if os.path.exists(ruta):
@@ -58,11 +58,11 @@ def leer_json(ruta):
 def escribir_json(ruta, datos):
 
     """
-    Escribe un diccionario en un archivo JSON.
+    Writes a dictionary to a JSON file.
 
     Args:
-        ruta (str): Ruta del archivo.
-        datos (dict): Diccionario con datos a guardar.
+        ruta (str): File path.
+        datos (dict): Dictionary to be saved.
     """
 
     with open(ruta, "w", encoding="utf-8") as file:
@@ -73,16 +73,16 @@ def escribir_json(ruta, datos):
 def introducir_receta_gradio(nombre, categoria, ingredientes, instrucciones):
 
     """
-    Añade una receta nueva a la base local.
+    Adds a new recipe to the local storage.
 
     Args:
-        nombre (str): Nombre de la receta.
-        categoria (str): Categoría (desayuno, almuerzo, cena).
-        ingredientes (str): Ingredientes separados por coma.
-        instrucciones (str): Instrucciones separadas por coma.
+        nombre (str): Recipe name.
+        categoria (str): Category (desayuno, almuerzo, cena).
+        ingredientes (str): Comma-separated ingredients.
+        instrucciones (str): Comma-separated instructions.
 
     Returns:
-        str: Mensaje de confirmación o error.
+        str: Confirmation or error message.
     """
 
     recetas = leer_json(ARCHIVO_RECETAS)
@@ -107,10 +107,10 @@ def introducir_receta_gradio(nombre, categoria, ingredientes, instrucciones):
 def ver_recetas_gradio():
 
     """
-    Devuelve una lista de recetas guardadas.
+    Returns a list of saved recipes.
 
     Returns:
-        str: Lista de recetas por categoría.
+        str: Recipes organized by category.
     """
 
     recetas = leer_json(ARCHIVO_RECETAS)
@@ -128,10 +128,10 @@ def ver_recetas_gradio():
 def generar_menu_gradio():
 
     """
-    Genera un menú semanal aleatorio con recetas.
+    Generates a random weekly menu using available recipes.
 
     Returns:
-        str: Menú con desayuno, almuerzo y cena por día.
+        str: Menu with breakfast, lunch, and dinner for each day.
     """
 
     recetas = leer_json(ARCHIVO_RECETAS)
@@ -143,7 +143,7 @@ def generar_menu_gradio():
         for cat in ["desayuno", "almuerzo", "cena"]:
             disponibles = recetas.get(cat, {})
             if disponibles:
-                # Verificamos que haya recetas para elegir
+                # Make sure there are recipes to choose from
                 nombre = random.choice(list(disponibles.keys()))
                 menu += f"  {cat.capitalize()}: {nombre}\n"
             else:
@@ -154,10 +154,10 @@ def generar_menu_gradio():
 def guardar_en_nube_gradio():
     
     """
-    Guarda las recetas locales en la nube usando una API.
+    Saves local recipes to the cloud via API.
 
     Returns:
-        str: Resultado del intento de sincronización.
+        str: Result of the synchronization.
     """
 
     recetas = leer_json(ARCHIVO_RECETAS)
@@ -172,10 +172,10 @@ def guardar_en_nube_gradio():
 def cargar_desde_nube_gradio():
 
     """
-    Carga recetas desde la nube y las guarda localmente.
+    Loads recipes from the cloud and saves them locally.
 
     Returns:
-        str: Resultado de la operación.
+        str: Result of the operation.
     """
 
     try:
@@ -185,7 +185,7 @@ def cargar_desde_nube_gradio():
     except requests.RequestException as e:
         return f"Error al cargar desde la nube: {e}"
     
-    # Guardamos las recetas sincronizadas en el archivo local
+    # Save the synchronized recipes to the local file
     escribir_json(ARCHIVO_RECETAS, nube_recetas)
     return "Recetas cargadas desde la nube."
 
@@ -193,16 +193,16 @@ def cargar_desde_nube_gradio():
 def eliminar_recetas_gradio(nombres):
 
     """
-    Elimina una o varias recetas por nombre.
+    Deletes one or more recipes by name.
 
     Args:
-        nombres (str): Nombres separados por coma.
+        nombres (str): Comma-separated recipe names.
 
     Returns:
-        str: Resultado indicando recetas eliminadas o no encontradas.
+        str: Result indicating which recipes were deleted or not found.
     """
 
-    # Limpiar y dividir la entrada
+    # Clean and split the input
     nombres = [nombre.strip() for nombre in nombres.split(",")]
 
     recetas = leer_json(ARCHIVO_RECETAS)
@@ -215,21 +215,21 @@ def eliminar_recetas_gradio(nombres):
     for nombre in nombres:
         receta_eliminada = False
 
-        # Buscar en cada categoría
+        # Search within each category
         for categoria, recetas_categoria in recetas.items():
             if nombre in recetas_categoria:
-                del recetas_categoria[nombre]  # Eliminar receta
+                del recetas_categoria[nombre]  # Delete recipe
                 nombres_eliminados.append(nombre)
                 receta_eliminada = True
-                break  # Sale del bucle cuando se elimina la receta
+                break  # Exit the loop once the recipe is deleted
 
         if not receta_eliminada:
             nombres_no_encontrados.append(nombre)
     
-    # Guardar los cambios
+    # Save the changes
     escribir_json(ARCHIVO_RECETAS, recetas)
     
-    # Mensaje de resultado
+    # Result message
     if nombres_eliminados:
         resultado = f"Recetas eliminadas: {', '.join(nombres_eliminados)}."
     else:
@@ -244,7 +244,7 @@ def eliminar_recetas_gradio(nombres):
 def iniciar_gradio():
 
     """
-    Inicia la interfaz gráfica de usuario con pestañas para cada función.
+    Launches the graphical interface with tabs for each functionality.
     """
 
     interfaz1 = gr.Interface(
@@ -294,12 +294,12 @@ def iniciar_gradio():
         title="Eliminar Recetas"
     )
 
-    # Crear una interfaz con pestañas
+    # Create an interface with tabs
     gr.TabbedInterface(
         [interfaz1, interfaz2, interfaz3, interfaz4, interfaz5, interfaz6], 
         ["Añadir Receta", "Ver Recetas", "Menú Semanal", "Guardar en Nube", "Cargar de Nube", "Eliminar Recetas"]
     ).launch()
 
-# Iniciar la aplicación
+# Start the app
 if __name__ == "__main__":
     iniciar_gradio()
