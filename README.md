@@ -1,97 +1,97 @@
 # Proyecto_digitalizacion
 
-# Recetario Semanal #
+# Weekly Recipe Book #
 
-Este proyecto es una aplicación en Python que permite gestionar un recetario personalizado. Con esta herramienta, puedes añadir recetas por categorías (desayuno, almuerzo y cena), ver las recetas disponibles, generar un menú semanal aleatorio, y sincronizar tus recetas con la nube utilizando JSONBin.io.
+This project is a Python application that allows you to manage a personalized recipe book. With this tool, you can add recipes by category (breakfast, lunch, and dinner), view available recipes, generate a random weekly menu, and sync your recipes to the cloud using JSONBin.io.
 
-# Motivación #
+# Motivation #
 
-Alimentarnos no debería de ser un quebradero de cabeza, sin embargo en este mundo tan ajetreado, a veces lo es... bien porque vas a hacer una receta y te falta algún ingrediente por la falta de planificación o simplemente no se te ocurre qué comer.
-Por eso, surge este proyecto, para ayudarte a hacer tu vida un poco más fácil ofreciéndote lo siguiente:
+Eating shouldn't be a headache, but in today's hectic world, sometimes it is—whether it's because you're missing an ingredient due to lack of planning or you simply don’t know what to eat. That's why this project was created: to make your life a bit easier by offering the following:
+- Register and categorize your recipes by meal type (breakfast, lunch, dinner).
+- Generate a random weekly menu in seconds.
+- Save and sync your recipes to the cloud so you’re not tied to one device.
+- Keep everything in a simple format (.json) that’s easy to edit.
 
-- Registrar y clasificar tus recetas por tipo de comida (desayuno, almuerzo, cena).
-- Generar un menú semanal aleatorio en segundos.
-- Guardar y sincronizar tus recetas en la nube, para no depender de un solo dispositivo.
-- Mantener todo en un formato sencillo (`.json`) que se pueda editar fácilmente.
+# Deployment Instructions #
 
-# Instrucciones de despliegue #
-
-Necesitas lo siguiente:
-
+You’ll need the following:
 
 - Python >= 3.8
 - Gradio
 - Requests
-- Archivo `.env` con las siguientes variables:
-  ```env
-  API_URL= https://api.jsonbin.io/v3/b/TU_BIN_ID
-  X_MASTER_KEY= <TU_X_MASTER_KEY>
-  X_ACCESS_KEY= <TU_X_ACCESS_KEY>
-  BIN_PRIVATE= true
-  BIN_NAME= NombreDelBin
+- A .env file with the following variables:
 
-  IMPORTANTE: Sustituye TU_X_MASTER_KEY, TU_X_ACCESS_KEY y TU_BIN_ID por tus propias credenciales y el ID del bin de jsonbin.io.
 
-¿No te queda claro de dónde sacar los datos?
+API_URL = https://api.jsonbin.io/v3/b/YOUR_BIN_ID
+X_MASTER_KEY = <YOUR_X_MASTER_KEY>
+X_ACCESS_KEY = <YOUR_X_ACCESS_KEY>
+BIN_PRIVATE = true
+BIN_NAME = YourBinName
 
-X_MASTER_KEY y X_ACCESS_KEY: se obtienen desde jsonbin.io una vez que creas una cuenta y generas una clave de API (en el dashboard).
 
-API_URL: está compuesto por https://api.jsonbin.io/v3/b/ seguido del ID del bin (que obtienes al crear el bin en jsonbin.io).
+IMPORTANT: Replace YOUR_X_MASTER_KEY, YOUR_X_ACCESS_KEY, and YOUR_BIN_ID with your own credentials and the JSONBin.io bin ID.
 
-BIN_NAME: es simplemente un nombre descriptivo para el bin (lo puedes elegir tú).
+Not sure where to get this info?
 
-BIN_PRIVATE: pon true si el bin es privado (recomendado), o false si es público.
+- X_MASTER_KEY and X_ACCESS_KEY: You get these from JSONBin.io after creating an account and generating an API key (in the dashboard).
 
-# ¿Cómo ejecutarlo en local? #
+- API_URL: This is made up of https://api.jsonbin.io/v3/b/ followed by the bin ID (which you get after creating a bin on JSONBin.io).
 
-1. Clona el repositorio
+- BIN_NAME: This is just a descriptive name for the bin (you choose it).
+
+- BIN_PRIVATE: Set to true if the bin is private (recommended), or false if it’s public.
+
+# How to Run Locally #
+
+1. Clone the repository:
 
 git clone https://github.com/elvirarm/Proyecto_digitalizacion.git
 cd Proyecto_digitalizacion
 
-2. Crea un entorno virtual y actívalo
+2. Create and activate a virtual environment:
 
 python -m venv venv
 source venv/bin/activate  # En Windows usa venv\Scripts\activate
 
-3. Instala las dependencias
+3. Install the dependencies:
 
 pip install -r requirements.txt
 
-4. Crea un archivo .env en el directorio raíz con tus credenciales de API.
+4. Create a .env file in the root directory with your API credentials.
 
-5. Ejecuta la aplicación:
+5. Run the application:
 
 python menu.py
 
 
-# Funcionalidades principales y cómo utilizarlas#
+# Main Features and How to Use Them #
 
-Una vez que ejecutes la aplicación simplemente tienes que copiar el link que se te ha generado en el navegador y utilizar la aplicación.
+Once the app is running, just copy the generated link into your browser to use the interface.
 
 
-**Pestaña 1.  Añadir recetas:** Permite al usuario introducir nuevas recetas por categorías (desayuno, almuerzo y cena).
 
-Se pide al introducir la receta:
+**Tab 1.  Add Recipes:** Allows the user to enter new recipes by category (breakfast, lunch, dinner).
 
-- Nombre de la receta
+You'll be asked to provide:
 
-- Categoría a la que pertenece
+- Recipe name
 
-- Ingredientes separados por comas
+- Category it belongs to
 
-- Instrucciones de la receta separadas por comas
+- Ingredients (comma-separated)
 
-**Ejemplo de entrada:**
+- Instructions (comma-separated)
+
+**Example input:**
 
 Nombre de la receta: Panqueques de avena
 Categoría (desayuno, almuerzo, cena): desayuno
 Ingredientes (separados por ','): avena, huevo, banana, canela
 Instrucciones (separadas por ','): mezclar ingredientes, calentar sartén, cocinar por ambos lados
 
-**Pestaña 2. Ver recetas disponibles:** Muestra un listado de todas las recetas almacenadas localmente.
+**Tab 2. View Available Recipes:** Displays a list of all locally stored recipes.
 
-**Ejemplo de salida:**
+**Example output:**
 
 - Desayuno:
 
@@ -107,14 +107,12 @@ Ensalada de quinoa
 
 Pizza casera
 
-**Pestaña 3. Generar menú semanal:** Crea un menú semanal aleatorio basado en las recetas disponibles en cada categoría.
+**Tab 3: Generate Weekly Menu:** Creates a random weekly menu based on the available recipes in each category.
 
-El ejemplo de salida sería similar al anterior, pero añadiéndole los días de la semana.
+The output is similar to the above but includes the days of the week.
 
-**Pestaña 4. Subir recetas a la nube:** Guarda las recetas locales en un archivo JSON en la nube.
+**Tab 4: Upload Recipes to the Cloud:** Saves local recipes to a JSON file in the cloud.
 
-**Pestaña 5. Cargar recetas desde la nube:** Recupera las recetas almacenadas en la nube y las combina con las locales.
+**Tab 5: Load Recipes from the Cloud:** Retrieves recipes stored in the cloud and merges them with the local ones.
 
-**Pestaña 6. Eliminar recetas:** Permite eliminar recetas tanto del archivo local como de la nube (debes introducir el nombre de la receta que quieras eliminar).
-
-7. Salir.
+**Tab 6: Delete Recipes:** Allows you to delete recipes from both local storage and the cloud (you must enter the name of the recipe to delete).
