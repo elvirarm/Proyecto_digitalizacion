@@ -1,72 +1,72 @@
-¡Este es un proyecto open source, todas las aportaciones son bienvenidas!
+This is an open-source project, and all contributions are welcome!
 
-## GUÍA PARA CONTRIBUIR AL PROYECTO ##
+## GUIDE TO CONTRIBUTE TO THE PROJECT ##
 
-1. Clonar el repositorio
+1. Clone the repository
 
 git clone <https://github.com/elvirarm/Proyecto_digitalizacion.git>
-cd <nombre_del_directorio>
+cd <directory_name>
 
-2.  Instalar las dependencias necesarias
+2.  Install the required dependencies
 
-Este proyecto requiere algunas bibliotecas de Python para funcionar correctamente. Para instalarlas, ejecuta:
+This project requires some Python libraries to function properly. To install them, run:
 
 pip install -r requirements.txt
 
-3. Configurar las variables de Entorno
+3. Set up the Environment Variables
 
-Este proyecto utiliza un archivo .env para cargar las variables de configuración necesarias, como las claves de la API y la URL del servidor. Debes crear un archivo .env en el directorio raíz y agregar las siguientes variables:
+This project uses a .env file to load the necessary configuration variables, such as the API keys and server URL. You need to create a .env file in the root directory and add the following variables:
 
-API_URL= https://api.jsonbin.io/v3/b/TU_BIN_ID
-X_MASTER_KEY= <TU_X_MASTER_KEY>
-X_ACCESS_KEY= <TU_X_ACCESS_KEY>
+API_URL= https://api.jsonbin.io/v3/b/YOUR_BIN_ID
+X_MASTER_KEY= <YOUR_X_MASTER_KEY>
+X_ACCESS_KEY= <YOUR_X_ACCESS_KEY>
 BIN_PRIVATE= true
-BIN_NAME= NombreDelBin
+BIN_NAME= BinName
 
-IMPORTANTE: Sustituye TU_X_MASTER_KEY, TU_X_ACCESS_KEY y TU_BIN_ID por tus propias credenciales y el ID del bin de jsonbin.io.
+IMPORTANT: Replace YOUR_X_MASTER_KEY, YOUR_X_ACCESS_KEY, and TU_BIN_ID with your own credentials and the bin ID from jsonbin.io.
 
-¿No te queda claro de dónde sacar los datos?
+Not sure where to get these values?
 
-- X_MASTER_KEY y X_ACCESS_KEY: se obtienen desde jsonbin.io una vez que creas una cuenta y generas una clave de API (en el dashboard).
+- X_MASTER_KEY and X_ACCESS_KEY: These are obtained from jsonbin.io once you create an account and generate an API key (on the dashboard).
 
-- API_URL: está compuesto por https://api.jsonbin.io/v3/b/ seguido del ID del bin (que obtienes al crear el bin en jsonbin.io).
+- API_URL: This is composed of https://api.jsonbin.io/v3/b/ followed by the bin ID (which you get when creating the bin on jsonbin.io).
 
-- BIN_NAME: es simplemente un nombre descriptivo para el bin (lo puedes elegir tú).
+- BIN_NAME: This is just a descriptive name for the bin (you can choose it).
 
-- BIN_PRIVATE: pon true si el bin es privado (recomendado), o false si es público.
+- BIN_PRIVATE: Set this to true if the bin is private (recommended), or false if it is public.
 
 
+4. Develop and test locally
 
-4. Desarrollar y probar localmente
-
-Una vez que hayas configurado todo correctamente, puedes ejecutar la aplicación de manera local usando:
+Once you've configured everything correctly, you can run the application locally using:
 
 python menu.py
 
-5. Enviar un pull request
+5. Submit a pull request
 
-Si realizas mejoras o correcciones de errores, puedes enviar un pull request con tus cambios.
+If you make improvements or bug fixes, you can submit a pull request with your changes.
 
-## AMPLIACIONES DE INTERÉS ##
 
-Si quieres algunas ideas de cómo podrías contribuir al proyecto ahí te van unas cuantas, pero siéntete libre de aportar las tuyas propias:
+## INTERESTING EXTENSIONS ##
 
-1. Mejoras en la Gestión de Recetas
+If you are looking for ideas on how you could contribute to the project, here are a few suggestions, but feel free to add your own:
 
-- Etiquetas o Descripción: Añadir la posibilidad de agregar etiquetas o descripciones breves a las recetas para facilitar la búsqueda.
+1. Recipe Management Improvements
 
-- Ordenar Recetas: Implementar una función que permita ordenar las recetas por nombre, tiempo de preparación, dificultad, o popularidad.
+- Tags or Descriptions: Add the ability to add tags or brief descriptions to recipes to make searching easier.
 
-- Imágenes de Recetas: Permitir que los usuarios suban imágenes para acompañar las recetas.
+- Sort Recipes: Implement a function that allows users to sort recipes by name, preparation time, difficulty, or popularity.
 
-2. Generación de Menús Más Avanzados
+- Recipe Images: Allow users to upload images to accompany the recipes.
 
-- Menú por Preferencias Dietéticas: Añadir la opción de generar menús según preferencias como vegano, sin gluten, o bajo en calorías.
+2. Advanced Menu Generation
 
-- Menú Aleatorio con Restricciones: Permitir la generación de menús semanales con restricciones dietéticas o alergias específicas.
+- Menu Based on Dietary Preferences: Add the option to generate menus based on preferences such as vegan, gluten-free, or low-calorie.
 
-3. Integración con APIs Externas
+- Random Menu with Restrictions: Allow for generating weekly menus with dietary restrictions or specific allergies.
 
-- API de Nutrición: Integrar una API que proporcione información nutricional de los ingredientes de las recetas para que los usuarios puedan ver el valor nutricional de sus platos.
+3. Integration with External APIs
 
-- APIs de Compra de Ingredientes: Implementar una funcionalidad para consultar precios de los ingredientes en tiendas en línea y facilitar la compra directa desde la interfaz.
+- Nutrition API: Integrate an API that provides nutritional information for the ingredients in the recipes so that users can view the nutritional value of their dishes.
+
+- Ingredient Purchase APIs: Implement functionality to check the prices of ingredients in online stores and facilitate direct purchasing from the interface.
