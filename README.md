@@ -89,6 +89,8 @@ Categoría (desayuno, almuerzo, cena): desayuno
 Ingredientes (separados por ','): avena, huevo, banana, canela
 Instrucciones (separadas por ','): mezclar ingredientes, calentar sartén, cocinar por ambos lados
 
+![Tab 1. Add Recipes](images/pestania1.png)
+
 **Tab 2. View Available Recipes:** Displays a list of all locally stored recipes.
 
 **Example output:**
@@ -107,12 +109,23 @@ Ensalada de quinoa
 
 Pizza casera
 
+![Tab 2.View Available Recipes](images/pestania2.png)
+
 **Tab 3: Generate Weekly Menu:** Creates a random weekly menu based on the available recipes in each category.
 
 The output is similar to the above but includes the days of the week.
 
+![Tab 3. Generate Weekly Menu](images/pestania3.png)
+
+
 **Tab 4: Upload Recipes to the Cloud:** Saves local recipes to a JSON file in the cloud.
+
+![Tab 4. Upload Recipes to the Cloud](images/pestania4.png)
 
 **Tab 5: Load Recipes from the Cloud:** Retrieves recipes stored in the cloud and merges them with the local ones.
 
+![Tab 5.  Load Recipes from the Cloud](images/pestania5.png)
+
 **Tab 6: Delete Recipes:** Allows you to delete recipes from both local storage and the cloud (you must enter the name of the recipe to delete).
+
+![Tab 6. Delete Recipes](images/pestania6.png)
