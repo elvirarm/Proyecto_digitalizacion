@@ -1,179 +1,358 @@
 {
-    "lentejas": {
-        "ingredientes": [
-            "chorizo",
-            " pimientos",
-            " lentejas",
-            " arroz"
-        ],
-        "instrucciones": [
-            "cortar verduras",
-            " cortar chorizo",
-            " cocinar verduras",
-            " tostar chorizo",
-            " rehogar todo junto",
-            " añadir agua",
-            " esperar que hierva",
-            " esperar 20 minutos si utilizas olla exprés"
-        ]
+    "desayuno": {
+        "Tostadas con aguacate": {
+            "ingredientes": [
+                "pan integral",
+                "aguacate",
+                "sal",
+                "limón"
+            ],
+            "instrucciones": [
+                "Tostar el pan",
+                "Machacar el aguacate",
+                "Añadir sal y limón",
+                "Untar sobre el pan"
+            ]
+        },
+        "Porridge de avena": {
+            "ingredientes": [
+                "avena",
+                "leche",
+                "miel",
+                "frutas"
+            ],
+            "instrucciones": [
+                "Cocinar la avena con leche",
+                "Añadir miel",
+                "Servir con frutas"
+            ]
+        },
+        "Huevos revueltos": {
+            "ingredientes": [
+                "huevos",
+                "sal",
+                "aceite"
+            ],
+            "instrucciones": [
+                "Batir los huevos",
+                "Cocinarlos en sartén con aceite",
+                "Añadir sal al gusto"
+            ]
+        },
+        "Smoothie de plátano": {
+            "ingredientes": [
+                "plátano",
+                "leche",
+                "miel",
+                "canela"
+            ],
+            "instrucciones": [
+                "Licuar todos los ingredientes",
+                "Servir frío"
+            ]
+        },
+        "Yogur con granola": {
+            "ingredientes": [
+                "yogur natural",
+                "granola",
+                "miel",
+                "frutas"
+            ],
+            "instrucciones": [
+                "Mezclar todos los ingredientes en un bol"
+            ]
+        },
+        "Pan con tomate": {
+            "ingredientes": [
+                "pan",
+                "tomate",
+                "ajo",
+                "aceite de oliva",
+                "sal"
+            ],
+            "instrucciones": [
+                "Tostar el pan",
+                "Restregar ajo y tomate",
+                "Añadir aceite y sal"
+            ]
+        },
+        "Tortilla francesa": {
+            "ingredientes": [
+                "huevos",
+                "sal",
+                "aceite"
+            ],
+            "instrucciones": [
+                "Batir huevos",
+                "Cocinar en sartén con aceite",
+                "Doblar y servir"
+            ]
+        },
+        "Pancakes": {
+            "ingredientes": [
+                "harina",
+                "leche",
+                "huevo",
+                "azúcar",
+                "polvo de hornear"
+            ],
+            "instrucciones": [
+                "Mezclar ingredientes",
+                "Cocinar en sartén por ambos lados"
+            ]
+        }
     },
-    "tortilla": {
-        "ingredientes": [
-            "huevo",
-            " patatas"
-        ],
-        "instrucciones": [
-            "cortar patatas",
-            " freir patatas",
-            " batir huevos",
-            " añadir huevos a las patatas",
-            " freir todo junto"
-        ]
+    "almuerzo": {
+        "Ensalada César": {
+            "ingredientes": [
+                "lechuga",
+                "pollo",
+                "queso",
+                "croutons",
+                "salsa césar"
+            ],
+            "instrucciones": [
+                "Cortar los ingredientes",
+                "Mezclar con la salsa"
+            ]
+        },
+        "Arroz con pollo": {
+            "ingredientes": [
+                "arroz",
+                "pollo",
+                "pimiento",
+                "cebolla",
+                "ajo"
+            ],
+            "instrucciones": [
+                "Cocinar arroz",
+                "Sofreír pollo con vegetales",
+                "Mezclar todo"
+            ]
+        },
+        "Pasta boloñesa": {
+            "ingredientes": [
+                "pasta",
+                "carne picada",
+                "tomate",
+                "cebolla",
+                "ajo"
+            ],
+            "instrucciones": [
+                "Cocinar la pasta",
+                "Preparar la salsa con carne",
+                "Mezclar y servir"
+            ]
+        },
+        "Hamburguesa casera": {
+            "ingredientes": [
+                "pan",
+                "carne",
+                "lechuga",
+                "tomate",
+                "queso"
+            ],
+            "instrucciones": [
+                "Cocinar carne",
+                "Montar la hamburguesa"
+            ]
+        },
+        "Ensalada de atún": {
+            "ingredientes": [
+                "atún",
+                "lechuga",
+                "huevo cocido",
+                "maíz",
+                "tomate"
+            ],
+            "instrucciones": [
+                "Cortar ingredientes",
+                "Mezclar y aliñar al gusto"
+            ]
+        },
+        "Tacos de pollo": {
+            "ingredientes": [
+                "tortillas",
+                "pollo",
+                "cebolla",
+                "cilantro",
+                "limón"
+            ],
+            "instrucciones": [
+                "Cocinar pollo",
+                "Servir en tortillas con vegetales"
+            ]
+        },
+        "Fajitas de carne": {
+            "ingredientes": [
+                "carne",
+                "pimientos",
+                "cebolla",
+                "tortillas"
+            ],
+            "instrucciones": [
+                "Sofreír carne y vegetales",
+                "Servir en tortillas"
+            ]
+        },
+        "Lasaña": {
+            "ingredientes": [
+                "láminas de lasaña",
+                "carne",
+                "salsa bechamel",
+                "tomate",
+                "queso"
+            ],
+            "instrucciones": [
+                "Montar capas",
+                "Hornear hasta gratinar"
+            ]
+        },
+        "Sándwich de pollo": {
+            "ingredientes": [
+                "pan de molde",
+                "pollo cocido",
+                "lechuga",
+                "mayonesa"
+            ],
+            "instrucciones": [
+                "Rellenar el pan con los ingredientes"
+            ]
+        },
+        "Wok de verduras": {
+            "ingredientes": [
+                "brócoli",
+                "zanahoria",
+                "pimiento",
+                "salsa de soja"
+            ],
+            "instrucciones": [
+                "Saltear las verduras",
+                "Añadir salsa y servir"
+            ]
+        },
+        "Tortilla": {
+            "ingredientes": [
+                "Huevo",
+                "patatas"
+            ],
+            "instrucciones": [
+                "Corta las patatas",
+                "Fríelas en aceite caliente",
+                "Integra en un bol las patatas con el huevo batido",
+                "Cocínala hasta que esté dorada por ambos lados en una sartén"
+            ]
+        }
     },
-    "croquetas": {
-        "ingredientes": [
-            "carne",
-            " bechamel"
-        ],
-        "instrucciones": [
-            "cocinar todo",
-            " montar las croquetas",
-            " freir"
-        ]
-    },
-    "espaguetis a la carbonara": {
-        "ingredientes": [
-            "espaguetis",
-            " nata",
-            " bacon",
-            " cebolla"
-        ],
-        "instrucciones": [
-            "cocer la pasta 20 minutos",
-            " cortar la cebolla y pocharla en la sartén",
-            " freir el bacon en la sartén",
-            " mezclar los espaguetis con la nata y el resto de los ingredientes y calentar  en la sartén todo junto"
-        ]
-    },
-    "pollo al curry": {
-        "ingredientes": [
-            "pollo",
-            "cebolla",
-            "ajo",
-            "leche de coco",
-            "curry en polvo",
-            "aceite de oliva",
-            "sal"
-        ],
-        "instrucciones": [
-            "cortar el pollo en trozos pequeños",
-            "pelar y picar la cebolla y el ajo",
-            "calentar aceite en una sartén y sofreír la cebolla y el ajo hasta que estén tiernos",
-            "añadir el pollo y cocinar hasta que esté dorado",
-            "agregar el curry en polvo y mezclar bien",
-            "verter la leche de coco y cocinar a fuego lento durante 20 minutos",
-            "servir caliente"
-        ]
-    },
-    "ensalada césar":{
-        "ingredientes": [
-            "lechuga romana",
-            "pollo asado",
-            "pan tostado",
-            "queso parmesano",
-            "salsa César"
-        ],
-        "instrucciones": [
-            "lavar y cortar la lechuga romana en trozos",
-            "cortar el pollo asado en tiras",
-            "tostar el pan y cortarlo en cubitos",
-            "rallar el queso parmesano",
-            "mezclar la lechuga, el pollo, los cubitos de pan y el queso en un bol",
-            "añadir la salsa César y mezclar bien",
-            "servir inmediatamente"
-        ]
-    },
-    "brownie de chocolate": {
-        "ingredientes": [
-            "chocolate negro",
-            "mantequilla",
-            "azúcar",
-            "huevos",
-            "harina",
-            "nueces"
-        ],
-        "instrucciones": [
-            "precalentar el horno a 180°C",
-            "derretir el chocolate y la mantequilla al baño maría",
-            "batir los huevos con el azúcar hasta que estén espumosos",
-            "mezclar el chocolate derretido con la mezcla de huevos",
-            "añadir la harina y mezclar hasta que esté integrada",
-            "agregar las nueces picadas",
-            "verter la mezcla en un molde engrasado",
-            "hornear durante 25-30 minutos",
-            "dejar enfriar antes de servir"
-        ]
-    },
-    "salmón al horno con verduras": {
-        "ingredientes": [
-            "salmón fresco",
-            "brócoli",
-            "zanahoria",
-            "calabacín",
-            "aceite de oliva",
-            "limón",
-            "sal",
-            "pimienta"
-        ],
-        "instrucciones": [
-            "precalentar el horno a 200°C",
-            "cortar el brócoli, la zanahoria y el calabacín en trozos",
-            "colocar el salmón y las verduras en una bandeja para horno",
-            "aliñar con aceite de oliva, jugo de limón, sal y pimienta",
-            "hornear durante 20-25 minutos o hasta que el salmón esté cocido",
-            "servir caliente"
-        ]
-    },
-    "crema de calabacín y espinacas": {
-        "ingredientes": [
-            "calabacín",
-            "espinacas frescas",
-            "cebolla",
-            "ajo",
-            "caldo de verduras",
-            "aceite de oliva",
-            "sal",
-            "pimienta"
-        ],
-        "instrucciones": [
-            "pelar y picar la cebolla y el ajo",
-            "calentar aceite de oliva en una olla y sofreír la cebolla y el ajo hasta que estén tiernos",
-            "cortar el calabacín en rodajas y añadirlo a la olla",
-            "agregar las espinacas y el caldo de verduras",
-            "cocinar a fuego medio durante 15-20 minutos",
-            "triturar la mezcla hasta obtener una crema suave",
-            "sazonar con sal y pimienta al gusto",
-            "servir caliente"
-        ]
-    },
-    "ensalada de garbanzos y vegetales": {
-        "ingredientes": [
-            "garbanzos cocidos",
-            "tomate",
-            "pepino",
-            "pimiento verde",
-            "cebolla morada",
-            "perejil fresco",
-            "limón",
-            "aceite de oliva",
-            "sal",
-            "comino"
-        ],
-        "instrucciones": [
-            "cortar el tomate, el pepino, el pimiento y la cebolla en cubitos",
-            "mezclar los garbanzos con los vegetales en un bol",
-            "aliñar con el jugo de limón, aceite de oliva, sal, comino y perejil fresco",
-            "servir frío"
-        ]
+    "cena": {
+        "Sopa de lentejas": {
+            "ingredientes": [
+                "lentejas",
+                "zanahoria",
+                "cebolla",
+                "ajo",
+                "caldo"
+            ],
+            "instrucciones": [
+                "Cocinar todo junto hasta que esté tierno"
+            ]
+        },
+        "Tortilla de patatas": {
+            "ingredientes": [
+                "patatas",
+                "huevos",
+                "cebolla",
+                "sal",
+                "aceite"
+            ],
+            "instrucciones": [
+                "Freír patatas y cebolla",
+                "Mezclar con huevo y cocinar"
+            ]
+        },
+        "Pizza casera": {
+            "ingredientes": [
+                "masa",
+                "salsa de tomate",
+                "queso",
+                "toppings al gusto"
+            ],
+            "instrucciones": [
+                "Montar ingredientes en la masa",
+                "Hornear hasta dorar"
+            ]
+        },
+        "Sándwich vegetal": {
+            "ingredientes": [
+                "pan integral",
+                "aguacate",
+                "tomate",
+                "lechuga",
+                "pepino"
+            ],
+            "instrucciones": [
+                "Montar todos los ingredientes entre rebanadas"
+            ]
+        },
+        "Crema de calabaza": {
+            "ingredientes": [
+                "calabaza",
+                "patata",
+                "cebolla",
+                "caldo de verduras"
+            ],
+            "instrucciones": [
+                "Cocer ingredientes",
+                "Triturar y servir caliente"
+            ]
+        },
+        "Salteado de tofu": {
+            "ingredientes": [
+                "tofu",
+                "brotes de soja",
+                "pimiento",
+                "salsa de soja"
+            ],
+            "instrucciones": [
+                "Saltear todo junto en sartén"
+            ]
+        },
+        "Arroz tres delicias": {
+            "ingredientes": [
+                "arroz",
+                "jamón",
+                "huevo",
+                "guisantes",
+                "zanahoria"
+            ],
+            "instrucciones": [
+                "Cocinar arroz",
+                "Saltear con los demás ingredientes"
+            ]
+        },
+        "Quesadillas": {
+            "ingredientes": [
+                "tortillas",
+                "queso",
+                "jamón",
+                "cebolla"
+            ],
+            "instrucciones": [
+                "Rellenar tortillas",
+                "Cocinar en sartén hasta dorar"
+            ]
+        },
+        "Croquetas": {
+            "ingredientes": [
+                "masa de bechamel",
+                "pollo o jamón",
+                "huevo",
+                "pan rallado"
+            ],
+            "instrucciones": [
+                "Formar croquetas",
+                "Rebozar y freír"
+            ]
+        }
     }
 }
