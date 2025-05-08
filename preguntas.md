@@ -1,154 +1,188 @@
-*Ciclo de vida del dato (5b):*
+*Criterio 6a) Objetivos estratégicos::*
 
-- ¿Cómo se gestionan los datos desde su generación hasta su eliminación en tu proyecto?
+-- ¿Qué objetivos estratégicos específicos de la empresa aborda tu software?
 
-Los datos se generan al pedírselos al usuario a través de la consola mediante las funciones introducir_receta().
-El usuario debe introducir el nombre de la receta, los ingredientes y las intrucciones.
+Mi software se enfoca sobre todo en la agilización del trabajo humano y aumentar la productividad, lo que se traduce en mayor rentabilidad, ya que se optimizan tiempos de consulta y se incrementa el volumen de atención sin sacrificar calidad.
 
-Estos datos que se han pedido se guardan localmente en un *JSON* (recetas.json), pero también tiene la opción de subirlo a la nube mediante la función guardar_json().
+Por ejemplo, mi aplicación que está enfocada en el ámbito de la nutrición, puede hacer que nutricionistas y dietistas pauten recomendaciones y menús a los clientes con tan solo un clic. Esto agiliza enormemente los tiempos de consulta, pudiendo ver a más clientes en menos tiempo. Esto permite al profesional centrarse más en el trato humano, sin perder el toque personalizado que distingue su servicio.
 
-Los datos recogidos se utilizan para mostrar las recetas disponibles a través de ver_recetas_disponibles() y para mostrar_menu_semanal() que genera un menú de lunes a domingo con las recetas guardadas de forma aleatoria.
+En resumen, mi aplicación ayuda a los siguientes objetivos:
 
-La eliminación de los datos se puede hacer con la función eliminar_receta() que permite borrar los datos de forma local e incluso borrarlos de la nube. 
+* Optimización del tiempo de consulta
 
-- ¿Qué estrategia sigues para garantizar la consistencia e integridad de los datos?
+* Mejora en la atención personalizada
 
-La *consistencia* de los datos se garantiza cuando se sobreescribe el json al añadir y eliminar una receta.
+* Estandarización de procesos: Con esto me refiero a que si en un clínica hay varios nutricionistas, se puede seguir una línea de trabajo en conjunto, siguiendo los mismos criterios nutricionales al tener una lista de recetas ya generadas.
 
-La *integridad* actualmente no se está trabajando bien porque al guardar el json en la nube y al cargarlo se pueden pisar las recetas porque se trabaja con un único json. Esto podría mejorarlo trabajando para que cada usuario tuviese su propio json de recetas, pudiendo compartirla con su el *ID* del archivo.
 
-- Si no trabajas con datos, ¿cómo podrías incluir una funcionalidad que los gestione de forma eficiente?
+-- ¿Cómo se alinea el software con la estrategia general de digitalización?
 
-*Almacenamiento en la nube (5f):*
+Con mi aplicación pretendo ayudar a negocios que antes hacían el trabajo de forma manual, a papel y desde cero, a agilizar los procedimientos a través del uso de herramientas digitales accesibles. Es una aplicación muy sencilla, además con interfaz gráfica en la que el usuario no tiene que tener muchos conocimientos para usarla. Por tanto, automatizo tareas que antes se hacían de manera más laboriosa y lenta, como la elaboración de menús, tener una base con las recetas que más le gusten o con las que el profesional esté acostumbrado a trabajar, poder tenerlas organizadas por categoría para poder verlas de un simple vistazo...
 
-- Si tu software utiliza almacenamiento en la nube, ¿cómo garantizas la seguridad y disponibilidad de los datos?
+En conclusión, permite que la empresa además de agilizar su trabajo, también se destaque frente a la competencia por la utilización de tecnología, ofreciendo de cara al público una imagen de estar actualizados y en constante crecimiento.
 
 
-En la API se utilizan *IDs de acceso privadas* para que nadie que no tenga los ids pueda tener acceso a los datos, garantizando la seguridad.
-Además de crear el repositorio de datos privado y usar un *ID único en la URL* (donde el ID es *67d217508a456b796674a341*) que sirve de puntero hacia el repositorio.
+*Criterio 6b) Áreas de negocio y comunicaciones:*
 
-        url = "https://api.jsonbin.io/v3/b/67d217508a456b796674a341"
-        "X-Master-Key":"$2a$10$YPbdwuG2GnwUMcfvEDi9A.pCni9x8VOsAQhhOAU4L1w.Lex/KLnRK",
-        "X-Access-Key":"$2a$10$h4AJh0OW/9KMuLXKOU/.Uui1mqXi2w58umcWVAXOdzdXRg0lHmk3G",
-        "X-Bin-Private":"true"
+-- ¿Qué áreas de la empresa (producción, negocio, comunicaciones) se ven más beneficiadas con tu software?
 
-Respecto a la *disponibilidad*, es cierto que los datos de la nube dependen de la disponibilidad de la API, pero como también se guardan de manera local no sería un problema.
+Como he comentado anteriormente, las áreas que más se ven beneficiadas son las de producción (generación de menús al instante, consultas más rápidas y eficaces) y las de atención al cliente.
 
+* En producción: el software automatiza tareas que antes se hacían manualmente, como organizar recetas y generar menús semanales personalizados, lo que libera de carga de trabajo al nutricionista y agiliza su trabajo.
 
-- ¿Qué alternativas consideraste para almacenar datos y por qué elegiste tu solución actual?
+* En atención al cliente: mejora la calidad del servicio, ya que permite al nutricionista dedicar más tiempo a cada paciente contestándole dudas que tenga o incluso dándole recomendaciones y consejos persoanlizados. Básicamente el tiempo que antes se dedicaba en pautar las recetas, ahora se dedica a un trato cercano con el cliente.
 
-*Almacenamiento de los datos en local*
 
-Al principio me planteé dónde almacenar los datos, considerando las opciones que hemos visto en programación, como *JSON* o *XML*. Finalmente, me decanté por *JSON* debido a su simplicidad y facilidad de uso, ya que me parece una opción mucho más intuitiva y sencilla de trabajar.
+-- ¿Qué impacto operativo esperas en las operaciones diarias?
 
+El impacto operativo que se espera es la reducción de tareas manuales, agilizando el trabajo. Esto permitiría un trato más cercano con el cliente, lo que atraería a más potenciales clientes gracias a las recomendaciones de los anteriores, y ver a más clientes en menos tiempo, ya que todo el tiempo que se perdía haciendo estas labores manualmente, están automatizadas por el software.
 
-*Almacenamiento de los datos en la nube*
+Además el nutricionista cuenta con un espacio donde poder organizar las recetas, sin tener que estar buscando o recordando las recetas que podría pautar.
 
-Estuve buscando diferentes APIs para guardar el Json en la nube, pero todas las que encontré eran más complejas que estas o de pago.
-Es por la *sencillez* y la *versión gratuita* que he elegido esta opción.
 
-Aunque no las he considerado, existen otras alternativas: *Firebase, AWS S3*, o una base de datos en la nube (*MongoDB Atlas, PostgreSQL en la nube*).
+*Criterio 6c) Áreas susceptibles de digitalización:*
 
-- Si no usas la nube, ¿cómo podrías integrarla en futuras versiones?
+-- ¿Qué áreas de la empresa son más susceptibles de ser digitalizadas con tu software?
 
-*Seguridad y regulación (5i):*
+En el caso de un nutricionista, las áreas más susceptibles de ser digitalizadas con este software son:
 
-- ¿Qué medidas de seguridad implementaste para proteger los datos o procesos en tu proyecto?
+* Gestión de recetas y menús, que normalmente se hace a mano o con hojas de cálculo.
 
-Utilizo *claves API* para autentificarme en *JSONBIN*, pero es cierto que están expuestas en el código.
-Además, los datos se guardan de forma privada, pero podría mejorar la seguridad más cifrando los datos y descifrándolos al leer.
+* Organización de consultas, ya que permite tener menús preparados de antemano.
 
+* Almacenamiento de información, con la opción de guardar las recetas en la nube para acceder a ellas desde cualquier dispositivo.
 
-- ¿Qué normativas (e.g., GDPR) podrían afectar el uso de tu software y cómo las has tenido en cuenta?
 
-Pues actualmente no estoy trabajando con datos sensibles, pero mi idea es que más adelante añadir un *login* para que el usuario tuviese acceso a sus recetas y poder añadir una capa extra de protección.
+-- ¿Cómo mejorará la digitalización las operaciones en esas áreas?
 
-Si tratara con datos de usuario me afectaría el *Reglamento General de Protección de Datos (GDPR)* que es la normativa que se encarga de regular la protección de datos en la Unión Europea. Además en España los datos de los usuarios también se protegen a través de la *Ley Orgánica de Protección de Datos (LOPD)* que afectaría a mi proyecto.
+* Se reducirá el tiempo que el nutricionista dedica a tareas repetitivas como redactar menús desde cero.
 
-- Si no implementaste medidas de seguridad, ¿qué riesgos potenciales identificas y cómo los abordarías en el futuro?
+* Se mejorará el acceso a la información, ya que las recetas estarán organizadas y disponibles en todo momento.
 
-*Implicación de las THD en negocio y planta (2e):*
+* Se evitarán errores al automatizar partes del proceso, como la generación de menús semanales.
 
-- ¿Qué impacto tendría tu software en un entorno de negocio o en una planta industrial?
+* Permitirá al profesional ofrecer una atención más rápida y personalizada a sus pacientes.
 
-La aplicación más básica que se me ocurre para mi software en un entorno de negocio sería en el ámbito de la *nutrición y dietética*. Por ejemplo, un/a nutricionista o dietista que se dedique a diseñar menús semanales para sus clientes podría beneficiarse enormemente de esta herramienta.
 
-El software le permitiría tener una base de datos de recetas saludables predefinidas, lo que facilitaría la creación de menús personalizados de manera rápida y eficiente. Además, al generar menús automáticamente, el profesional ahorraría tiempo y podría centrarse en otras tareas, como la atención personalizada a sus clientes, respondiendo a posibles dudas que puedan surgir durante la sesión e implementando cambios.
+*Encaje de áreas digitalizadas (AD):*
 
-- ¿Cómo crees que tu solución podría mejorar procesos operativos o la toma de decisiones?
+-- ¿Cómo interactúan las áreas digitalizadas con las no digitalizadas?
 
-Mi software agiliza y simplifica el trabajo en varios aspectos:
+Teniendo en cuenta que mi intención principal es que mi software vaya dirigida a las áreas de nutrición y dietética, planteo el escenario como si se tratase de una consulta de nutrición.
 
-## Automatización de tareas repetitivas:
+En esta el software actúa como una herramienta digital que se integra con prácticas todavía tradicionales. Por ejemplo:
 
-En lugar de crear menús manualmente, el software genera automáticamente combinaciones de recetas, lo que reduce el tiempo dedicado a esta tarea.
+* El nutricionista sigue manteniendo el trato directo y personalizado con el paciente (área no digitalizada), pero puede usar el software durante la sesión para crear o ajustar menús en tiempo real, adaptándolos a las necesidades del paciente.
 
-## Flexibilidad y personalización:
+* Las recetas generadas digitalmente pueden imprimirse o enviarse por correo electrónico, facilitando la entrega en formatos comprensibles y accesibles para pacientes que prefieren documentación física.
 
-Si el menú generado no es del todo adecuado, se puede regenerar fácilmente hasta obtener una opción que se ajuste a las necesidades del cliente.
+* La base de datos digital de recetas permite mantener un registro organizado y reutilizable, mientras que los resultados y comentarios del paciente pueden seguir tomándose manualmente durante la consulta.
 
-## Organización y acceso rápido:
 
-Al tener todas las recetas almacenadas y categorizadas, el acceso a la información es inmediato, lo que facilita la toma de decisiones.
+-- ¿Qué soluciones o mejoras propondrías para integrar estas áreas?
 
-- Si tu proyecto no aplica directamente a negocio o planta, ¿qué otros entornos podrían beneficiarse?
+Pensando en este ámbito, creo que estaría bien incluir en la aplicación para que fuese más personalizada y útil para el seguimiento del paciente:
 
-También se me ocurre que podría aplicarse a cualquier entorno donde se trabaje con alimentación. Por ejemplo: en hospitales que ofrecen la comida a los pacientes, en los comedores escolares e incluso a nivel particular, en casa para pensar rápidamente qué comer durante la semana, ahorrando tiempo. 
+* Exportación de los menús que se generen a formato PDF o Word: Actualmente solo los genera, pero ni si quiera los guarda. Además también estaría bien crear un JSON para que se guardasen dichos menús, hasta que integre lo de poder exportarlos.
 
-*Mejoras en IT y OT (2f):*
+* Ficha del paciente conectada a la aplicación: Estaría bien que hubiese una pestaña de datos del cliente, donde poder guardar preferencias, intolerancias, alimentos que no le gusten, sus objetivos y progresos e incluso los menús semanales pautados anteriormente.
 
-- ¿Cómo puede tu software facilitar la integración entre entornos IT y OT?
+* Añadir etiquetas a las recetas para poder hacer menús personalizados: Con esto me refiero a por ejemplo poder filtrar las recetas con etiquetas como 'Sin gluten', 'Sin lactosa', 'Vegetariana'... así se podrían hacer menús rápidamente adaptados a las necesidades del cliente.
 
-- ¿Qué procesos específicos podrían beneficiarse de tu solución en términos de automatización o eficiencia?
 
-- Si no aplica a IT u OT, ¿cómo podrías adaptarlo para mejorar procesos tecnológicos concretos?
+*Criterio 6e) Necesidades presentes y futuras:*
 
-Mi software no aplica a IT u OT porque está pensado más para facilitar la vida a nivel de usuario o a pequeños negocios.
-Sin embargo, podría adaptarlo de esta forma:
+-- ¿Qué necesidades actuales de la empresa resuelve tu software?
 
-## Integración con IT ##
+* Ahorro de tiempo en la planificación de menús: automatiza la generación de menús semanales a partir de recetas ya registradas.
 
-1. Para conectarlo con sistemas empresariales:
+* Gestión digital de recetas: centraliza las recetas saludables en una base de datos organizada por categorías (desayuno, almuerzo y cena). Esto permite al profesional obtener ideas rápidamente de qué pautarle al paciente o incluso darle alternativas a alimentos que el cliente rechace (por ejemplo, si no le gusta un desayuno que se le ha incluido en el menú, pero no lo quiere cambiar entero, se podría ir a la lista de recetas por categoría y proponerle opciones diferentes de la lista hasta ver cuál le convence más)
 
-- Integrar el software con un *ERP (Enterprise Resource Planning)* para gestionar inventarios de ingredientes y optimizar costes.
+* Accesibilidad desde la nube: permite guardar y cargar recetas desde una API en la nube, lo cual evita la pérdida de información y facilita el trabajo desde distintos dispositivos o ubicaciones.
 
-- Conectar con un *CRM (Customer Relationship Management)* para personalizar menús según las preferencias de los clientes.
+* Facilidad de uso sin conocimientos técnicos: gracias a la interfaz gráfica (con Gradio), el nutricionista puede interactuar con el sistema de forma intuitiva sin necesidad de saber programar.
 
-2. Automatización avanzada:
 
-- Usar *inteligencia artificial (IA)* para sugerir recetas basadas en ingredientes disponibles o preferencias del usuario.
+-- ¿Cómo crees que tu solución podría mejorar procesos operativos o la toma de decisiones?
 
-- Implementar un sistema de notificaciones para recordar la compra de ingredientes o la preparación de comidas.
+* Agiliza procesos rutinarios: al eliminar tareas repetitivas como escribir o buscar recetas, el profesional gana tiempo que puede dedicar a la atención al cliente.
 
-3. Análisis de datos:
+* Apoya la toma de decisiones personalizadas: al tener organizadas las recetas y poder generar menús aleatorios, es más fácil elegir y modificar planes alimenticios adaptados a cada paciente.
 
-- Usar herramientas de análisis para estudiar patrones de consumo y optimizar la planificación de menús.
+* Escalable para el futuro: en versiones futuras, se podrían añadir filtros nutricionales, historial de pacientes o conexión con apps de seguimiento dietético, ampliando el uso del software en más áreas del negocio.
 
-## Integración con OT ##
 
-1. Conexión con dispositivos IoT:
+*Criterio 6f) Relación con tecnologías:*
 
-- Integrar el software con sensores en cocinas industriales para monitorear el uso de ingredientes en tiempo real.
+-- ¿Qué tecnologías habilitadoras has empleado y cómo impactan en las áreas de la empresa?
 
-- Conectar con dispositivos de medición (balanzas, termómetros) para garantizar que las recetas se sigan correctamente.
+He utilizado las siguientes tecnologías habilitadoras:
 
-2. Gestión de inventarios en planta:
+* Python como lenguaje principal de desarrollo, por su simplicidad.
 
-- Conectar el software con sistemas de gestión de inventarios para automatizar la compra de ingredientes cuando estos estén por agotarse.
+* Gradio para crear una interfaz gráfica fácil de usar, lo que permite que el nutricionista no necesite conocimientos técnicos para interactuar con el software.
 
-*Tecnologías Habilitadoras Digitales (2g):*
+* API + JSON para sincronizar datos en la nube, permitiendo que las recetas estén disponibles desde cualquier lugar.
 
-- ¿Qué tecnologías habilitadoras digitales (THD) has utilizado o podrías integrar en tu proyecto?
+Estas tecnologías impactan positivamente en el área de gestión de recetas, atención al cliente y almacenamiento digital, haciendo que el trabajo diario sea más rápido, seguro y organizado.
+  
+-- ¿Qué beneficios específicos aporta la implantación de estas tecnologías?
 
-He utilizado *JSOBIN* par almacenar los datos en la nube y *APIs REST* para interactuar con servicios externos.
+* Automatización de tareas repetitivas, como generar menús semanales.
 
+* Acceso remoto y seguro a la información, gracias al uso de API y almacenamiento en la nube.
 
-- ¿Cómo mejoran estas tecnologías la funcionalidad o el alcance de tu software?
+* Facilidad de uso, permitiendo que cualquier profesional de la nutrición pueda usar el programa sin formación técnica.
 
-*JSONBIN* aporta acceso remoto a los datos, lo que facilita su uso en diferentes dispositivos y respaldo de los datos lo que facilita la recuperación de los datos en caso de que se pierda el archivo local.
+* Escalabilidad futura, ya que el sistema puede ampliarse fácilmente con nuevas funciones o integraciones. De hecho, quiero incluir que las recetas tengan información nutricional, que las recetas se puedan ver con imágenes y con las instrucciones porque realmente no se está ofreciendo el poder visualizar cómo se hace la receta en ningún momento, que se les pueda añadir etiquetas a las recetas para que luego se puedan filtrar y utilizarse para generar menús más específicos...
 
-*APIs REST* permite que el programa se integre con otros servicios o aplicaciones, además facilita añadir nuevas funcionalidades en un futuro.
 
-- Si no has utilizado THD, ¿cómo podrías implementarlas para enriquecer tu solución?
+*Criterio 6g) Brechas de seguridad:*
 
-Podría utilizar la *IA* para sugerir recetas o para darle el nombre de la receta que el usuario quiera y que esta genere automáticamente en el JSON los ingredientes y la receta con la estructura correcta.
+-- ¿Qué posibles brechas de seguridad podrían surgir al implementar tu software?
+
+* Falta de autenticación externa: Aunque he mejorado respecto al proyecto anterior, ya que anteriormente publiqué las claves de la API en el código... y actualmente las protejo incluyéndolas en un archivo .env y obteniéndolas directamente de ahí, es cierto que la seguridad de los datos en la nube solo dependen de estas claves, si estas claves se filtraran de algún modo no hay una barrera extra de protección.
+
+* Riesgo de pérdida de datos locales: Al depender de un solo archivo local (recetas.json), si se corrompe o elimina accidentalmente, toda la información se pierde.
+  
+* Entradas no controladas del usuario: El software permite al usuario introducir textos (ingredientes, instrucciones, etc.) que podrían incluir contenido inesperado si no se validan adecuadamente. Actualmente, por ejemplo, solo estoy validando que los ingredientes y las instrucciones vayan separadas por comas.
+
+
+-- ¿Qué medidas concretas propondrías para mitigarlas?
+
+* Se podría implementar que la autenticación fuese basada en tokens o usuarios, pero la API que estoy utilizando no lo permite, así que en su lugar lo que propongo sería cambiar regularmente las claves API por si en algún momento se pudiesen filtrar. 
+
+* Para que no se perdiese información, se podría crear una copia de seguridad antes de realizarse las funciones de sincronizar con la nube o eliminar recetas, así si en la operación el archivo se dañase, siempre estaría la copia.
+
+* Validar las entradas de los usuarios de forma más robusta, para evitar que puedan inyectar scripts (Cross-Site Scripting). Por ejemplo, podría evitar que se pudiesen utilizar los caracteres '<', '>'.
+
+*Criterio 6h) Tratamiento de datos y análisis:*
+
+
+-- ¿Cómo se gestionan los datos en tu software y qué metodologías utilizas?
+
+En mi aplicación, los datos (recetas) se gestionan tanto localmente como en la nube. A nivel local, utilizo un archivo en formato JSON (recetas.json) para guardar, leer y modificar la información. El usuario introduce la receta y automáticamente se guarda en el JSON, permitiendo flexibilidad a la hora de trabajar con él (guardarlo en local, en la nube a través de la API, además de muchas otras herramientas).
+
+Para el tratamiento de datos, aplico los siguientes métodos:
+
+* Acceso estructurado a datos: Uso funciones específicas como leer_json() y escribir_json() para asegurar que la lectura y escritura del archivo sea controlada y coherente.
+
+* Separación por categorías: Las recetas se organizan por tipo de comida (desayuno, almuerzo, cena), lo que facilita el acceso, filtrado y análisis.
+
+* Sincronización en la nube: Utilizo una API externa para hacer backup o restaurar las recetas usando solicitudes GET y PUT, lo que permite mantener los datos accesibles desde distintas ubicaciones o dispositivos.
+
+
+-- ¿Qué haces para garantizar la calidad y consistencia de los datos?
+
+Para garantizar la calidad y la consistencia, implemento varias medidas:
+
+* Validación de datos de entrada: Antes de guardar una receta, se comprueba que la categoría sea válida (solo desayuno, almuerzo o cena). Esto evita errores por datos mal escritos.
+
+* Estructuración clara: Los ingredientes e instrucciones se procesan como entradas de texto limpias a través de la función (strip()) que lo quehace es eliminar espacios innecesarios.
+
+* Control de errores: Uso manejo de excepciones (try-except) al leer archivos y hacer peticiones HTTP, para evitar que fallos externos afecten el funcionamiento del programa.
+
+* Sincronización ordenada: Al sincronizar datos con la nube, primero se lee todo el contenido local o remoto y se guarda de forma completa, evitando duplicados o pérdidas parciales.
+
+* Interfaz clara: El usuario interactúa con el sistema mediante una interfaz visual guiada (Gradio) por lo que reduce la posibilidad de que se equivoque al introducir datos (las categorías tienes que "clicarlas" en vez de escribirlas, por ejemplo).
+
